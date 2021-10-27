@@ -15,4 +15,12 @@ public class InvoiceService {
 		}
 		return totalFare;
 	}
+
+	public double calculateFare(Ride[] rides) {
+		double totalFare = 0.0;
+		for (Ride ride : rides) {
+			totalFare = CalculateFare(ride.getDistance(), ride.getTime());
+		}
+		return totalFare;
+	}
 }
